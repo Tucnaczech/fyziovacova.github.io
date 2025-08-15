@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stránka nenalezena – Eva Vacová Fyzioterapie</title>
+  <meta name="description" content="Chyba 404 – stránka nebyla nalezena. Vraťte se na domovskou stránku Evy Vacové, fyzioterapie v Praze." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: var(--primary-light, #e0fafd);
+      color: var(--primary-dark, #0097a7);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+    }
+    .error-container {
+      max-width: 500px;
+    }
+    .error-code {
+      font-size: 10rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .error-message {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    .error-desc {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #276d7a;
+    }
+    .btn-primary {
+      background-color: var(--primary-dark, #0097a7);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary, #00bfcf);
+    }
+    .btn-primary i {
+      font-size: 1.3rem;
+    }
+    @media(max-width: 480px) {
+      .error-code {
+        font-size: 6rem;
+      }
+      .error-message {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container" role="main">
+    <div class="error-code" aria-label="404 chyba">404</div>
+    <div class="error-message">Stránka nenalezena</div>
+    <div class="error-desc">Omlouváme se, ale požadovaná stránka nebyla nalezena.<br />Zkontrolujte adresu nebo se vraťte zpět na domovskou stránku.</div>
+    <a href="index.html" class="btn-primary" aria-label="Vrátit se na domovskou stránku">
+      <i class="fas fa-home"></i> Domů
+    </a>
+  </div>
+</body>
+</html>
