@@ -1,194 +1,181 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eva Vacová – Fyzioterapie Praha</title>
-  <meta name="description" content="Eva Vacová – individuální fyzioterapie a rehabilitace v centru Prahy. Moderní přístupy, osobní péče, snadný kontakt i objednávka." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Vacová | Fyzioterapie Praha</title>
+    <meta name="description" content="Eva Vacová – individuální fyzioterapie a rehabilitace v centru Prahy. Moderní přístupy, osobní péče, snadný kontakt i objednávka.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cookie Floating Bubble -->
-  <div id="cookie-fab" class="cookie-fab" title="Informace o cookies" aria-label="Informace o cookies" role="button" tabindex="0">
-    <i class="fas fa-cookie-bite"></i>
-  </div>
-
-  <!-- Cookie Consent Box -->
-  <div id="cookie-box" class="cookie-box" aria-live="polite" role="region" aria-label="Oznámení o cookies">
-    <div class="cookie-head">
-      <strong>🍪 Cookies</strong>
-      <button aria-label="Zavřít oznámení o cookies" onclick="hideCookieBox()">&times;</button>
-    </div>
-    <div class="cookie-text">
-      Tento web používá cookies k zajištění funkčnosti a anonymnímu měření návštěvnosti. <a href="#" onclick="openPrivacyModal();return false;">Více informací</a>.
-    </div>
-    <div class="cookie-actions">
-      <button onclick="acceptCookies()" class="btn btn-primary" aria-label="Přijmout cookies">Přijmout</button>
-      <button onclick="rejectCookies()" class="btn btn-outline" aria-label="Odmítnout cookies">Odmítnout</button>
-      <button onclick="openPrivacyModal()" class="btn btn-link" aria-label="Nastavení cookies">Nastavení</button>
-    </div>
-  </div>
-
-  <!-- Header Nav -->
-  <header>
-    <nav class="navbar" role="navigation" aria-label="Hlavní navigace">
-      <div class="nav-container">
-        <div class="logo" aria-label="Logo">
-          <span class="logo-name">Eva Vacová</span>
-          <span class="logo-desc">Fyzioterapie Praha</span>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <span><i class="fas fa-cookie-bite"></i> Tento web používá cookies pro lepší funkčnost. <a href="#" onclick="openPrivacyModal()">Více info</a>.</span>
+        <div>
+            <button id="accept-cookies" class="btn btn-small btn-primary">Přijmout</button>
+            <button id="reject-cookies" class="btn btn-small btn-outline">Odmítnout</button>
         </div>
-        <ul class="nav-menu">
-          <li><a href="#home" tabindex="0">Domů</a></li>
-          <li><a href="#services" tabindex="0">Služby</a></li>
-          <li><a href="#about" tabindex="0">O mně</a></li>
-          <li><a href="#contact" tabindex="0">Kontakt</a></li>
-        </ul>
-        <div class="hamburger" role="button" aria-label="Otevřít menu" tabindex="0" aria-expanded="false" aria-controls="main-menu">
-          <span></span><span></span><span></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-name">Eva Vacová</span>
+                    <span class="logo-desc">Fyzioterapie Praha</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Domů</a></li>
+                    <li><a href="#services">Služby</a></li>
+                    <li><a href="#about">O mně</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-flex">
+            <div class="hero-info">
+                <h1>Eva Vacová<br><span>Fyzioterapie Praha</span></h1>
+                <p>Individuální rehabilitace, manuální a sportovní fyzioterapie. Osobní přístup, moderní metody a příjemné prostředí v centru města.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Objednat se</a>
+                    <a href="tel:+420123456789" class="btn btn-outline"><i class="fas fa-phone"></i> +420 123 456 789</a>
+                </div>
+            </div>
+            <div class="hero-photo"><i class="fas fa-user-nurse"></i></div>
         </div>
-      </div>
-    </nav>
-  </header>
+    </section>
 
-  <!-- Hero -->
-  <section class="hero" id="home" tabindex="-1">
-    <div class="container hero-flex">
-      <div class="hero-info">
-        <h1>Eva Vacová<br /><span>Fyzioterapie Praha</span></h1>
-        <p>Individuální rehabilitace, manuální a sportovní fyzioterapie. Osobní přístup, moderní metody a příjemné prostředí v centru města.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Objednat se</a>
-          <a href="tel:+420123456789" class="btn btn-outline"><i class="fas fa-phone"></i> +420 123 456 789</a>
+    <!-- Services -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Služby</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <div class="service-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <h3>Rehabilitace</h3>
+                    <p>Individuální terapie po úrazech, operacích i jako prevence chronických potíží. Plán na míru každému klientovi.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Manuální terapie</h3>
+                    <p>Šetrné manuální techniky pro uvolnění pohybového aparátu, odstranění bolesti a obnovení pohyblivosti.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-running"></i></div>
+                    <h3>Sportovní fyzioterapie</h3>
+                    <p>Prevence, rehabilitace a zlepšení výkonu pro sportovce všech úrovní. Správné cvičení, péče o akutní i dlouhodobé potíže.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Cvičební terapie</h3>
+                    <p>Praktický nácvik cviků, správných pohybových vzorců a sestavení dlouhodobého režimu pro udržení zdraví.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fyzikální terapie</h3>
+                    <p>Moderní přístrojové techniky – elektroterapie, ultrazvuk, magnetoterapie pro efektivní úlevu.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Geriatrická fyzioterapie</h3>
+                    <p>Péče pro seniory – udržení mobility, sebeobsluhy a trénink rovnováhy, prevence pádů.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hero-photo" aria-hidden="true"><i class="fas fa-user-nurse"></i></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="section services">
-    <div class="container">
-      <h2 id="services-title">Služby</h2>
-      <div class="services-grid" role="list" aria-labelledby="services-title">
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fa-solid fa-notes-medical" aria-hidden="true"></i></div>
-          <h3>Rehabilitace</h3>
-          <p>Individuální terapie po úrazech, operacích i jako prevence chronických potíží. Plán na míru každému klientovi.</p>
-        </article>
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
-          <h3>Manuální terapie</h3>
-          <p>Šetrné manuální techniky pro uvolnění pohybového aparátu, odstranění bolesti a obnovení pohyblivosti.</p>
-        </article>
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fas fa-running" aria-hidden="true"></i></div>
-          <h3>Sportovní fyzioterapie</h3>
-          <p>Prevence, rehabilitace a zlepšení výkonu pro sportovce všech úrovní. Správné cvičení a péče o akutní i dlouhodobé potíže.</p>
-        </article>
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fas fa-dumbbell" aria-hidden="true"></i></div>
-          <h3>Cvičební terapie</h3>
-          <p>Praktický nácvik cviků, správných pohybových vzorců a sestavení dlouhodobého režimu pro udržení zdraví.</p>
-        </article>
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
-          <h3>Fyzikální terapie</h3>
-          <p>Moderní přístrojové techniky – elektroterapie, ultrazvuk, magnetoterapie pro efektivní úlevu.</p>
-        </article>
-        <article class="service" role="listitem" tabindex="0">
-          <div class="service-icon"><i class="fas fa-user-friends" aria-hidden="true"></i></div>
-          <h3>Geriatrická fyzioterapie</h3>
-          <p>Péče pro seniory – udržení mobility, sebeobsluhy a trénink rovnováhy, prevence pádů.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="container about-flex">
+            <div class="about-photo"><i class="fas fa-user-md"></i></div>
+            <div class="about-info">
+                <h2>O mně</h2>
+                <p>Jsem vystudovaná fyzioterapeutka s více než 15letou individuální praxí. Zakládám si na profesionálním, empatickém a osobním přístupu ke každému klientovi. Neustále se vzdělávám a kombinuji poznatky z různých terapeutických metod.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Vzdělání: 2. LF UK Praha – Fyzioterapie</li>
+                    <li><i class="fas fa-check"></i> Certifikace: manuální terapie, McKenzie metoda, rehabilitační cvičení, sportovní fyzioterapie</li>
+                    <li><i class="fas fa-check"></i> Zkušenosti s klienty všech věkových kategorií</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <div class="container about-flex">
-      <div class="about-photo" aria-hidden="true"><i class="fas fa-user-md"></i></div>
-      <div class="about-info">
-        <h2>O mně</h2>
-        <p>Jsem vystudovaná fyzioterapeutka s více než 15letou individuální praxí. Zakládám si na profesionálním, empatickém a osobním přístupu ke každému klientovi. Neustále se vzdělávám a kombinuji poznatky z různých terapeutických metod.</p>
-        <ul>
-          <li><i class="fas fa-check"></i> Vzdělání: 2. LF UK Praha – Fyzioterapie</li>
-          <li><i class="fas fa-check"></i> Certifikace: manuální terapie, McKenzie metoda, rehabilitační cvičení, sportovní fyzioterapie</li>
-          <li><i class="fas fa-check"></i> Zkušenosti s klienty všech věkových kategorií</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- Kontakt -->
+    <section id="contact" class="section contact">
+        <div class="container contact-flex">
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+                <div><i class="fas fa-map-marker-alt"></i> Václavské náměstí 15, Praha 1</div>
+                <div><i class="fas fa-clock"></i> Po–Pá: 8:00–18:00 · So: 9:00–13:00 · Ne: zavřeno</div>
+                <div><i class="fas fa-phone"></i> <a href="tel:+420123456789">+420 123 456 789</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:eva@fyzio-vacova.cz">eva@fyzio-vacova.cz</a></div>
+            </div>
+            <form class="contact-form">
+                <h3>Objednat se online</h3>
+                <input type="text" name="jmeno" placeholder="Jméno a příjmení" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="telefon" placeholder="Telefon" required>
+                <select name="sluzba" required>
+                    <option value="">Vyberte službu</option>
+                    <option value="rehabilitace">Rehabilitace</option>
+                    <option value="manualni">Manuální terapie</option>
+                    <option value="sportovni">Sportovní fyzioterapie</option>
+                    <option value="cviceni">Cvičební terapie</option>
+                    <option value="fyzikalni">Fyzikální terapie</option>
+                    <option value="geriatricka">Geriatrická fyzioterapie</option>
+                </select>
+                <textarea name="zprava" rows="3" placeholder="Popište vaše potíže či požadavek…"></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox" required>
+                    Souhlasím se <a href="#" onclick="openPrivacyModal()">zpracováním osobních údajů</a>
+                </label>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Odeslat objednávku</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- Kontakt -->
-  <section id="contact" class="section contact">
-    <div class="container contact-flex">
-      <div class="contact-info">
-        <h2>Kontakt</h2>
-        <address>
-          <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Václavské náměstí 15, Praha 1</div>
-          <div><i class="fas fa-clock" aria-hidden="true"></i> Po–Pá: 8:00–18:00 · So: 9:00–13:00 · Ne: zavřeno</div>
-          <div><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+420123456789">+420 123 456 789</a></div>
-          <div><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:eva@fyzio-vacova.cz">eva@fyzio-vacova.cz</a></div>
-        </address>
-      </div>
-      <form class="contact-form" aria-label="Objednávkový formulář">
-        <h3>Objednat se online</h3>
-        <input type="text" name="jmeno" placeholder="Jméno a příjmení" required aria-required="true" />
-        <input type="email" name="email" placeholder="Email" required aria-required="true" />
-        <input type="tel" name="telefon" placeholder="Telefon" required aria-required="true" />
-        <select name="sluzba" required aria-required="true" >
-          <option value="" disabled selected>Vyberte službu</option>
-          <option value="rehabilitace">Rehabilitace</option>
-          <option value="manualni">Manuální terapie</option>
-          <option value="sportovni">Sportovní fyzioterapie</option>
-          <option value="cviceni">Cvičební terapie</option>
-          <option value="fyzikalni">Fyzikální terapie</option>
-          <option value="geriatricka">Geriatrická fyzioterapie</option>
-        </select>
-        <textarea name="zprava" rows="3" placeholder="Popište vaše potíže či požadavek…"></textarea>
-        <label class="checkbox-label">
-          <input type="checkbox" required aria-required="true" />
-          Souhlasím se <a href="#" onclick="openPrivacyModal();return false;">zpracováním osobních údajů</a>
-        </label>
-        <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Odeslat objednávku</button>
-      </form>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div>
+                <strong>Eva Vacová – Fyzioterapie Praha</strong><br>
+                Václavské náměstí 15, Praha 1<br>
+                <i class="fas fa-phone"></i> <a href="tel:+420123456789">+420 123 456 789</a> |
+                <i class="fas fa-envelope"></i> <a href="mailto:eva@fyzio-vacova.cz">eva@fyzio-vacova.cz</a>
+            </div>
+            <div>
+                <a href="#services">Služby</a> ·
+                <a href="#about">O mně</a> ·
+                <a href="#contact">Kontakt</a> ·
+                <a href="#" onclick="openPrivacyModal();return false;">Ochrana údajů</a> ·
+                <a href="#" onclick="openCookieSettings();return false;">Nastavení cookies</a>
+            </div>
+            <div>
+                &copy; 2025 Eva Vacová. Všechna práva vyhrazena.
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-flex">
-      <div>
-        <strong>Eva Vacová – Fyzioterapie Praha</strong><br />
-        Václavské náměstí 15, Praha 1<br />
-        <i class="fas fa-phone"></i> <a href="tel:+420123456789">+420 123 456 789</a> |
-        <i class="fas fa-envelope"></i> <a href="mailto:eva@fyzio-vacova.cz">eva@fyzio-vacova.cz</a>
-      </div>
-      <div class="footer-links">
-        <a href="#services">Služby</a><a href="#about">O mně</a><a href="#contact">Kontakt</a>
-        <a href="#" onclick="openPrivacyModal();return false;">Ochrana údajů</a>
-        <a href="#" onclick="openCookieSettings();return false;">Nastavení cookies</a>
-      </div>
-      <div>&copy; 2025 Eva Vacová. Všechna práva vyhrazena.</div>
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePrivacyModal()">&times;</span>
+            <h3>Ochrana osobních údajů</h3>
+            <p><strong>Správce údajů:</strong> Eva Vacová, Václavské náměstí 15, Praha 1</p>
+            <p><strong>Účel:</strong> Zpracování objednávek a komunikace s klienty.</p>
+            <p><strong>Právní základ:</strong> Plnění smlouvy, oprávněný zájem.</p>
+            <p><strong>Doba uchování:</strong> Po dobu poskytování služeb + 3 roky.</p>
+            <p><strong>Práva:</strong> Přístup, oprava, výmaz, přenos údajů.</p>
+            <p><strong>Kontakt:</strong> eva@fyzio-vacova.cz</p>
+        </div>
     </div>
-  </footer>
-
-  <!-- Privacy Modal -->
-  <div id="privacy-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" tabindex="-1">
-    <div class="modal-content">
-      <button class="close" aria-label="Zavřít" onclick="closePrivacyModal()">&times;</button>
-      <h3 id="privacy-title">Ochrana osobních údajů</h3>
-      <p><strong>Správce údajů:</strong> Eva Vacová, Václavské náměstí 15, Praha 1</p>
-      <p><strong>Účel:</strong> Zpracování objednávek a komunikace s klienty.</p>
-      <p><strong>Právní základ:</strong> Plnění smlouvy, oprávněný zájem.</p>
-      <p><strong>Doba uchování:</strong> Po dobu poskytování služeb + 3 roky.</p>
-      <p><strong>Práva:</strong> Přístup, oprava, výmaz, přenos údajů.</p>
-      <p><strong>Kontakt:</strong> eva@fyzio-vacova.cz</p>
-    </div>
-  </div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
